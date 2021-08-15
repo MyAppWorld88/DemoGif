@@ -1,0 +1,22 @@
+
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #2980b9;
+}
+.child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #679c67;
+}
+button{
+    border-radius: 5px;
+    background-color: green;
+    font-size: 22px;
+    color: #fff;
+}

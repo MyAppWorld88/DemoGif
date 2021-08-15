@@ -1,0 +1,52 @@
+.maincontent{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: #000;
+    padding-top: 48px;
+    color: #fff;
+    overflow-x: hidden;
+}
+.showdata{
+
+    width: 80vw;
+    height: 65vh;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* background-color: red; */
+    overflow-y: hidden;
+
+}
+.child{
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    background-color: darkgrey;
+}
+.search{
+    width: 100%;
+    margin-bottom: 3px;
+}
+.search input{
+    width: 72%;
+    margin-right: 3px;
+}
+button{
+    border-radius: 5px;
+}
+.pagination{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    background-color: #fff;
+}
+@media only screen and (max-width: 768px) {
+   .showdata{
+    overflow-y: scroll;
+   }
+  }

@@ -1,0 +1,29 @@
+
+<div class="maincontent">
+  <div class="">
+      <h1>DEMO PROJECT</h1>
+  </div> 
+  <div class="search">
+  <input type="text" #searchT [(ngModel)]="searchTerm"  placeholder="Search gif by title"> 
+  
+    <select (change)="changeNoOfgif(nogif.value)" #nogif>
+      <option value="20">20</option>
+      <option value="30">30</option>
+      <option value="40">40</option>
+    </select>
+
+  </div>
+  <div class="showdata">
+    <!-- <div *ngFor="let k of allgif"> -->
+    <div class="child" *ngFor="let k of allgif|datafilter:searchTerm| paginate: { itemsPerPage: 10, currentPage: p }"> 
+        <div >
+        <img src="{{k.images.downsized.url}}" height="200px"  width="200px">
+      
+        </div> 
+    </div>
+    
+  </div> 
+  <div class="pagination">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div> 
+</div>
